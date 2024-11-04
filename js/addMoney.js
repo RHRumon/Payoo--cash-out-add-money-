@@ -11,9 +11,16 @@ document.getElementById('btn').addEventListener('click', function(event){
         let currentBalance = getTextFieldId('original-taka');
         
         let total = inputNumber + currentBalance;
-        // console.log(total);
+        console.log(total);
         document.getElementById('original-taka').innerText = total;
         
+    
+        // adding in transaction div
+        let p = document.createElement('p');
+        p.innerText = `Added: ${inputNumber} Taka, Current Balance ${total}`;
+        console.log(p);
+        document.getElementById('transaction-container').appendChild(p);
+
     }
     else{
         alert('Pin ERROR');
