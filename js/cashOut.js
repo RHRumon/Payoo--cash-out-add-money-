@@ -10,8 +10,7 @@ document
     console.log(cashOutAmount);
 
     if (cashOutPin === 1111) {
-      // let cashAmount = parseFloat(cashOutAmount);
-
+      
       let currentCash = document.getElementById("original-taka").innerText;
       let currentAmount = parseFloat(currentCash);
 
@@ -30,9 +29,10 @@ document
       let div = document.createElement("div");
       div.classList.add("bg-yellow-300");
       div.innerHTML = `
-      <h4 class = "text-2xl font-bold">Cash Out</h4>
+      <h4 class = "text-2xl font-bold text-black">Cash Out</h4>
       <p class = "text-black">Money withdraw ${cashOutAmount} . New Balance is ${currentBalance}</p>
       `;
+      div.classList.add('rounded-lg');
       document.getElementById("transaction-container").appendChild(div);
       
     } else {
